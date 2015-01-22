@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :users
 
   resources :captains do
+    member :comments do
+     end
     resources :boats do
       resources :deals
     end
