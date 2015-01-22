@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   resources :users
 
   resources :captains do
-    member :comments do
-     end
+    member do
+      post :create_comment
+      delete :delete_comment
+    end
     resources :boats do
       resources :deals
     end
