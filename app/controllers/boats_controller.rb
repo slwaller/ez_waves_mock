@@ -7,7 +7,7 @@ class BoatsController < ApplicationController
   def show
     @boat = Boat.find params[:id]
   end
-  
+
   def create
     @boat = Boat.create boat_params
     respond_to do |format|
@@ -22,7 +22,9 @@ class BoatsController < ApplicationController
   def new
     @boat = Boat.new
   end
+
   def edit
+    @boat = Boat.find params[:id]
   end
   def update
   end
