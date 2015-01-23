@@ -1,5 +1,7 @@
 class BoatsController < ApplicationController
+
   def index
+    @boat = Boat.all
   end
   def show
   end
