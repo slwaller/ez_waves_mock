@@ -4,6 +4,7 @@ class BoatsController < ApplicationController
     @boat = Boat.all
   end
   def show
+    @boat = Boat.find params[:id]
   end
   def create
   end
