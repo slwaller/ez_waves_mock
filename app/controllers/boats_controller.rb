@@ -9,6 +9,7 @@ class BoatsController < ApplicationController
   def create
   end
   def new
+    @boat = Boat.new
   end
   def edit
   end
