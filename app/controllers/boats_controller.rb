@@ -26,8 +26,15 @@ class BoatsController < ApplicationController
   def edit
     @boat = Boat.find params[:id]
   end
+
   def update
   end
+
   def destroy
+  end
+
+  private
+  def boat_params
+    params.require(:boat).permit(:make, :model, :capacity)
   end
 end
